@@ -1,0 +1,23 @@
+<main class="main">
+    <div class="promo__container">
+        <div class="promo__info info">
+            <span class="info__subtitle">The 188th International</span>
+            <h1 class="info__heading">October<br>fest</h1>
+            <div class="info__thesis">
+                BEER-FOOD-MUSIC
+            </div>
+            <div class="info__date">
+                Sept 16 - Oct 3 2023 | Theresienwiese, Munich
+            </div>
+            <div class="info__text">
+                The festival features drinks from hundreds of breweries around the world. <br><a href="#" class="info__text_link">Choose your favorites now</a> so you don't forget to try them out at Oktoberfest!
+            </div>
+        </div>
+        <div class="promo__media">
+            <img *ngIf="isMobile" class="promo__image" src="../assets/beerManMobile.png" alt="Мужчина с двумя пивами)">
+            <img *ngIf="!isMobile" class="promo__image" src="../assets/beerMan.png" alt="Мужчина с пивом">
+            <button class="promo__button button">Find brewery</button>
+        </div>
+    </div>
+    <app-map-section></app-map-section>
+</main>

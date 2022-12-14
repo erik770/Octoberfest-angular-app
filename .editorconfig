@@ -10,7 +10,6 @@ trim_trailing_whitespace = true
 
 [*.ts]
 quote_type = double
-ij_typescript_spaces_
 
 [*.md]
 max_line_length = off

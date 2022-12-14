@@ -1,0 +1,26 @@
+body {
+  --logo-font-color: #ca7c0c;
+  --text-yellow-color: #c0802b;
+  --background-color: #f0e8c5;
+  --main-red-color: #d23739;
+  --secondary-red-color: #b63b3d;
+  --heading-text-color: var(--main-red-color);
+
+  --button-color: var(--secondary-red-color);
+  --button-hover-color: #c42b2d;
+  --button-text-color: #fff;
+  // --background-color: #fdfafb;
+  // --news-container-background-color: white;
+  // --header-background-color: #C1EBC8;
+  // --buttons-background-color: #6B7D7D;
+  // --news-background-color: rgba(0, 0, 0, 0.027);
+  // --comments-background-color:  var(--news-background-color);
+
+  // --news-title-text-color: black;
+  // --news-link-color: black;
+  // --news-info-text-color: rgb(49, 49, 49);
+  // --news-info-date-color: rgb(109, 109, 109);
+  // --comments-title-text-color: #283D3B;
+  // --comments-counter-text-color: #42734B;
+  // --loader-color: #42734B;
+}

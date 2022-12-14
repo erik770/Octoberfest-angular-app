@@ -34,7 +34,15 @@
             "avoidEscape": true
           }
         ],
-        "semi": ["error", "always"]
+        "@typescript-eslint/member-delimiter-style": [
+          "error",
+          {
+            "multiline": {
+              "delimiter": "comma",
+              "requireLast": true
+            }
+          }
+        ]
       }
     },
     {
