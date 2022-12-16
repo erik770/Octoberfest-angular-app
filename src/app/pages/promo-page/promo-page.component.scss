@@ -7,18 +7,6 @@
     gap: 35px;
     justify-content: space-between;
     z-index: 2;
-    &::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      right: 0;
-      top: 0;
-      // background-color: aqua;
-      background-image: url("../../../assets/background.png");
-      background-repeat: repeat;
-      z-index: 0;
-    }
   }
 
   &__info {

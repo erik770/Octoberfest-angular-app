@@ -10,15 +10,28 @@
 // }
 
 .wrapper {
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-    background-color: var(--background-color);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background-color: var(--background-color);
 }
 
 .main {
-    flex-direction: column;
-    flex: 1 1 auto;
-    font-family: Poppins;
+  position: relative;
+  flex-direction: column;
+  flex: 1 1 auto;
+  font-family: Poppins;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background-image: url("../assets/background.png");
+    background-repeat: repeat;
+    background-size: contain;
+    z-index: 0;
+  }
 }

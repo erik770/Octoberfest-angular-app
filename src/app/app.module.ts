@@ -5,10 +5,11 @@ import {DataViewModule} from "primeng/dataview";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { BreweryItemComponent } from "./components/breweryItem/breweryItem.component";
+import { BreweryItemComponent } from "./components/breweryItem/brewery-item.component";
 import { PromoPageComponent } from "./pages/promo-page/promo-page.component";
 import { HeaderComponent } from "./components/header/header.component";
 import { MapSectionComponent } from "./components/map-section/map-section.component";
+import { NearSectionComponent } from "./components/near-section/near-section.component";
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { MapSectionComponent } from "./components/map-section/map-section.compon
     PromoPageComponent,
     HeaderComponent,
     MapSectionComponent,
+    NearSectionComponent,
   ],
   imports: [
     BrowserModule,
