@@ -1,0 +1,92 @@
+:host ::ng-deep {
+  .breweries {
+    &__dataView.p-dataview {
+      .p-dataview-header {
+        background-color: transparent;
+        padding: 1rem 4rem;
+      }
+      .p-dataview-content {
+        background-color: transparent;
+      }
+      .p-paginator {
+        background-color: transparent;
+      }
+      .p-dataview-content {
+        padding: 0 4rem;
+      }
+      .p-paginator {
+        button {
+          &:not(.p-highlight):hover {
+            background: var(--brewery-background-color);
+          }
+        }
+      }
+      .p-link {
+        font-size: 1.25rem;
+      }
+    }
+
+    &__input {
+      width: 100%;
+      .p-inputtext {
+        width: 100%;
+        box-sizing: border-box;
+        &:focus {
+          border-color: transparent;
+          box-shadow: 0 0 0 0.1rem var(--brewery-border-color);
+        }
+        &:hover {
+          border-color: var(--brewery-border-color);
+        }
+      }
+    }
+  }
+}
+
+// PC
+@media (max-width: 1279px) {
+  :host ::ng-deep {
+    .breweries {
+      &__dataView.p-dataview {
+        .p-dataview-header {
+          padding: 1rem 3rem;
+        }
+        .p-dataview-content {
+          padding: 0 3rem;
+        }
+      }
+    }
+  }
+}
+
+// Tablet
+@media (max-width: 991px) {
+  :host ::ng-deep {
+    .breweries {
+      &__dataView.p-dataview {
+        .p-dataview-header {
+          padding: 1rem 1rem;
+        }
+        .p-dataview-content {
+          padding: 0 1rem;
+        }
+      }
+    }
+  }
+}
+
+// Mobile
+@media (max-width: 767px) {
+  :host ::ng-deep {
+    .breweries {
+      &__dataView.p-dataview {
+        .p-dataview-header {
+          padding: 1rem 0px;
+        }
+        .p-dataview-content {
+          padding: 0;
+        }
+      }
+    }
+  }
+}

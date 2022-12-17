@@ -2,8 +2,9 @@
   display: flex;
   flex-direction: column;
   gap: 7px;
-  padding: 5px 10px;
-  background-color: var(--dark-background-color);
+  padding: 0.4rem 2rem;
+  border: 3px solid var(--brewery-border-color);
+  background-color: var(--brewery-background-color);
   border-radius: 1rem;
   font-size: 1.75rem;
   margin-bottom: 10px;

@@ -6,8 +6,11 @@ body {
   --main-red-color: #d23739;
   --secondary-red-color: #b63b3d;
   --heading-text-color: var(--main-red-color);
-  --brewery-text-color: #732b15;
   --city-text-color: var(--secondary-red-color);
+
+  --brewery-border-color: var(--dark-background-color);
+  --brewery-background-color: #f8f6d2;
+  --brewery-text-color: #732b15;
 
   --button-color: var(--secondary-red-color);
   --button-hover-color: var(--main-red-color);
