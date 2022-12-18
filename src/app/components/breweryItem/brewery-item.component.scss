@@ -9,7 +9,14 @@
   font-size: 1.75rem;
   margin-bottom: 10px;
   color: var(--brewery-text-color);
+  cursor: pointer;
+  text-decoration: none;
 
+  // :hover {
+  //   .brewery__name {
+  //     text-decoration: underline;
+  //   }
+  // }
   &__location {
     font-size: 1.25rem;
   }

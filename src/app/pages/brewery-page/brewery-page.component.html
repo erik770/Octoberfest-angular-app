@@ -1,0 +1,39 @@
+<section class="brewery">
+  <div class="brewery__container">
+    <div class="brewery__name">{{ brewery.name }}</div>
+    <div class="brewery__info info">
+      <div class="info__title">About</div>
+      <div class="info__text">
+        {{ brewery.name }} is
+        <span class="info__type">
+          {{ brewery.brewery_type | formatBreweryType }}
+        </span>
+        <span *ngIf="brewery.country">
+          that is located in
+          <span *ngIf="brewery.city">{{ brewery.city }}, </span>
+          <span *ngIf="brewery.state">{{ brewery.state }}, </span>
+          <span class="info__country">{{ brewery.country }}</span>
+        </span>
+      </div>
+    </div>
+    <div class="brewery__contact contact">
+      <div class="contact__list">
+        <span class="contact__contacts"> Contacts </span>
+        <span>
+          <span class="contact__key">Adress:</span> {{ brewery.street }},
+          {{ brewery.postal_code }}
+          <span *ngIf="brewery.address_2"> or {{ brewery.address_2 }}</span>
+        </span>
+        <span *ngIf="brewery.phone">
+          <span class="contact__key">Phone: </span>
+          <a class="contact__link" href="tel: {{brewery.phone}}"> {{ brewery.phone }}</a>
+        </span>
+        <span *ngIf="brewery.website_url">
+          <span class="contact__key">Website: </span>
+          <a class="contact__link" href={{brewery.website_url}}>{{ brewery.website_url }}</a>
+        </span>
+      </div>
+      <div id="map" class="contact__map"></div>
+    </div>
+  </div>
+</section>

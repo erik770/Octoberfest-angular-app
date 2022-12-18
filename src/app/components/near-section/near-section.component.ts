@@ -5,6 +5,7 @@ import { BreweriesService } from "src/app/services/breweries.service";
 import * as L from "leaflet";
 import { IPosition } from "src/app/models/position";
 import { defaultPosition } from "src/app/consts/consts";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: "app-near-section",
@@ -26,6 +27,7 @@ export class NearSectionComponent implements OnInit, AfterViewInit {
       },
       error: () => this.initBreweries(defaultPosition),
     });
+    this.localBreweries$ = this.brewerisesService.breweries$;
   }
 
   ngAfterViewInit(): void {
@@ -43,10 +45,9 @@ export class NearSectionComponent implements OnInit, AfterViewInit {
   }
 
   private initBreweries(position: IPosition) {
-    this.localBreweries$ = this.brewerisesService.getNearby(
-      this.currentPosition
-    );
+    this.brewerisesService.getNearby(position);
     this.localBreweries$.subscribe((breweries: IBrewery[]) => {
+      if (breweries.length === 0) return;
       const nearestBrewery = breweries[0];
       const middlePoint = this.middlePoint(position, {
         latitude: +nearestBrewery.latitude,

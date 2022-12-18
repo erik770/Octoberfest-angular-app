@@ -6,4 +6,4 @@ export const defaultPosition: IPosition = {
 };
 
 export const BREWERIES_PER_PAGE = 20;
-export const BREWERIES_TOTAL_COUNT = 5782;
+export const BREWERIES_TOTAL_COUNT = 5777;

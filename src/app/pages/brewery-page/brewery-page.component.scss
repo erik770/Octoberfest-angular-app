@@ -1,0 +1,77 @@
+.brewery {
+  text-align: center;
+  &__name {
+    margin: 0.5rem 0px;
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 4rem;
+    color: var(--heading-text-color);
+    text-shadow: 0px 8px 5px rgba(0, 0, 0, 0.23);
+  }
+  &__info {
+    margin-top: 1rem;
+  }
+  font-family: Montserrat;
+  font-size: 1.5rem;
+  color: var(--logo-font-color);
+  line-height: 1.25;
+}
+
+.info {
+  &__title {
+    margin: 1rem;
+    display: inline-block;
+    background-color: var(--main-red-color);
+    padding: 0.4rem 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 2.5rem;
+    color: var(--button-text-color);
+  }
+  &__text {
+    text-align: start;
+  }
+  &__type {
+    color: var(--city-text-color);
+  }
+  &__country {
+    color: var(--city-text-color);
+  }
+}
+.contact {
+  margin-top: 2.5rem;
+
+  text-align: start;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  flex: 1 1 auto;
+  &__contacts {
+    font-weight: 700;
+    font-size: 1.3em;
+    color: var(--heading-text-color);
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+  &__key {
+    color: var(--city-text-color);
+  }
+  &__link {
+    text-decoration: none;
+    color: var(--logo-font-color);
+    &:hover {
+      text-decoration: underline;
+      color: var(--main-red-color);
+    }
+  }
+  &__map {
+    flex: 1 1 50%;
+  }
+}
+
+#map {
+  height: 400px;
+}

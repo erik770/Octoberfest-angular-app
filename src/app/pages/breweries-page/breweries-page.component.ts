@@ -5,6 +5,7 @@ import {
 } from "src/app/consts/consts";
 import { IBrewery } from "src/app/models/brewery";
 import { BreweriesService } from "src/app/services/breweries.service";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: "app-breweries-page",
@@ -12,7 +13,10 @@ import { BreweriesService } from "src/app/services/breweries.service";
   styleUrls: ["./breweries-page.component.scss"],
 })
 export class BreweriesPageComponent {
-  constructor(private brewerisesService: BreweriesService) {}
+  constructor(
+    private brewerisesService: BreweriesService,
+    private route: ActivatedRoute
+  ) {}
   breweriesPerPage = BREWERIES_PER_PAGE;
   breweries: IBrewery[] = [];
   breweriesTotalCount = BREWERIES_TOTAL_COUNT;
