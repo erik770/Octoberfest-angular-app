@@ -13,21 +13,22 @@ import { ActivatedRoute } from "@angular/router";
   styleUrls: ["./near-section.component.scss"],
 })
 export class NearSectionComponent implements OnInit, AfterViewInit {
-  constructor(private brewerisesService: BreweriesService) {}
   currentPosition: IPosition = defaultPosition;
   localBreweries$: Observable<IBrewery[]>;
   map: L.Map;
+  constructor(private brewerisesService: BreweriesService) {
+    this.localBreweries$ = this.brewerisesService.breweries$;
+  }
 
   ngOnInit(): void {
     this.getCurrentPosition().subscribe({
       next: (position: IPosition) => {
         this.currentPosition = position;
-        this.initBreweries(this.currentPosition);
+        this.initBreweries(position);
         this.addUserLocationMarker(this.currentPosition);
       },
       error: () => this.initBreweries(defaultPosition),
     });
-    this.localBreweries$ = this.brewerisesService.breweries$;
   }
 
   ngAfterViewInit(): void {
