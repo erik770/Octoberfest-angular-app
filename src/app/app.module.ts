@@ -37,4 +37,4 @@ import { BreweryTypePipe } from "./pipes/breweryType.pipe";
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

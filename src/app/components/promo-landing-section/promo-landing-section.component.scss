@@ -22,8 +22,7 @@
     gap: 30px;
   }
   &__image {
-    flex: 0 1 auto;
-    width: 100%;
+    flex: 1 1 80%;
     padding: 0px 40px;
     img {
       width: 100%;
@@ -75,18 +74,30 @@
   &__text {
     width: 500px;
     margin-top: 0.75rem;
-    font-family: Montserrat;
     font-size: 1.3rem;
     color: var(--logo-font-color);
 
     &_link {
       color: var(--heading-text-color);
       text-decoration: none;
-      font-weight: 600;
       &:hover {
         text-decoration: underline;
       }
     }
+  }
+}
+
+.button {
+  padding: 1rem 1.75rem;
+  font-family: Poppins;
+  font-size: 1.5rem;
+  color: var(--button-text-color);
+  background-color: var(--button-color);
+  border: none;
+  border-radius: 1rem;
+
+  &:hover {
+    background-color: var(--button-hover-color);
   }
 }
 
@@ -100,7 +111,7 @@
 }
 
 // Tablet
-@media (max-width: 991px) {
+@media (max-width: 1023px) {
   .promo {
     &__container {
       gap: 10px;
@@ -148,19 +159,5 @@
     &__heading {
       font-size: 4.5rem;
     }
-  }
-}
-
-.button {
-  padding: 1rem 1.75rem;
-  font-family: Poppins;
-  font-size: 1.5rem;
-  color: var(--button-text-color);
-  background-color: var(--button-color);
-  border: none;
-  border-radius: 1rem;
-
-  &:hover {
-    background-color: var(--button-hover-color);
   }
 }

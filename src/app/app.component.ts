@@ -1,6 +1,4 @@
-import { Component, OnInit } from "@angular/core";
-import { IBrewery } from "./models/brewery";
-import { BreweriesService } from "./services/breweries.service";
+import { Component } from "@angular/core";
 
 @Component({
   selector: "app-root",
@@ -8,5 +6,5 @@ import { BreweriesService } from "./services/breweries.service";
   styleUrls: ["./app.component.scss"],
 })
 export class AppComponent {
-  title = "nosi-trans-beerfest";
+  title = "Octoberfest 2023";
 }

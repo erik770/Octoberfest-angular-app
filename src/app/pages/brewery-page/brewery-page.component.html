@@ -1,6 +1,6 @@
 <section class="brewery">
   <div class="brewery__container">
-    <div class="brewery__name">{{ brewery.name }}</div>
+    <div class="brewery__name"><b>{{ brewery.name }}</b></div>
     <div class="brewery__info info">
       <div class="info__title">About</div>
       <div class="info__text">
@@ -30,7 +30,7 @@
         </span>
         <span *ngIf="brewery.website_url">
           <span class="contact__key">Website: </span>
-          <a class="contact__link" href={{brewery.website_url}}>{{ brewery.website_url }}</a>
+          <a class="contact__link" target="_blank" href={{brewery.website_url}}>{{ brewery.website_url }}</a>
         </span>
       </div>
       <div id="map" class="contact__map"></div>

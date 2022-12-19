@@ -12,11 +12,11 @@
   cursor: pointer;
   text-decoration: none;
 
-  // :hover {
-  //   .brewery__name {
-  //     text-decoration: underline;
-  //   }
-  // }
+  &:hover {
+    .brewery__name {
+      text-decoration: underline;
+    }
+  }
   &__location {
     font-size: 1.25rem;
   }

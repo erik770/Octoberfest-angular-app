@@ -19,11 +19,11 @@ const routes: Routes = [
     title: "Octoberfest breweries",
     component: BreweriesPageComponent,
   },
-  { path: "**", component: BreweriesPageComponent }, // TODO: err page
+  { path: "**", redirectTo: "" }, // TODO: err page
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

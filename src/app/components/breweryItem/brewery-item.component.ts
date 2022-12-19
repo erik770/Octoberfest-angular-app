@@ -1,6 +1,5 @@
-import { Component, EventEmitter, Input, Output } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { IBrewery } from "src/app/models/brewery";
-import { IPosition } from "src/app/models/position";
 
 @Component({
   selector: "app-brewery-item",

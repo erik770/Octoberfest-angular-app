@@ -9,25 +9,13 @@
       </div>
       <div class="info__text">
         The festival features drinks from hundreds of breweries around the
-        world. <br /><a routerLink="/breweries" class="info__text_link"
-          >Choose your favorites now</a
-        >
+        world. <br /><a routerLink="/breweries" class="info__text_link">Choose your favorites now</a>
         so you don't forget to try them out at Oktoberfest!
       </div>
     </div>
     <div class="promo__media">
-      <img
-        *ngIf="isMobile"
-        class="promo__image"
-        src="../assets/beerManMobile.png"
-        alt="Мужчина с двумя пивами)"
-      />
-      <img
-        *ngIf="!isMobile"
-        class="promo__image"
-        src="../assets/beerMan.png"
-        alt="Мужчина с пивом"
-      />
+      <img *ngIf="isMobile" class="promo__image" src="../assets/beerManMobile.png" alt="Мужчина с двумя пивами)" />
+      <img *ngIf="!isMobile" class="promo__image" src="../assets/beerMan.png" alt="Мужчина с пивом" />
       <button routerLink="/breweries" class="promo__button button">
         Find brewery
       </button>

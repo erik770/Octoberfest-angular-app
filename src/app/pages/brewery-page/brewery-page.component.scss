@@ -1,10 +1,13 @@
 .brewery {
   text-align: center;
+  position: relative;
+  z-index: 2;
+  cursor: default;
+
   &__name {
     margin: 0.5rem 0px;
     letter-spacing: 0.4rem;
     text-transform: uppercase;
-    font-weight: 800;
     font-size: 4rem;
     color: var(--heading-text-color);
     text-shadow: 0px 8px 5px rgba(0, 0, 0, 0.23);
@@ -12,7 +15,6 @@
   &__info {
     margin-top: 1rem;
   }
-  font-family: Montserrat;
   font-size: 1.5rem;
   color: var(--logo-font-color);
   line-height: 1.25;
@@ -45,7 +47,7 @@
   text-align: start;
   display: flex;
   justify-content: space-between;
-  gap: 50px;
+  gap: 10px;
   flex: 1 1 auto;
   &__contacts {
     font-weight: 700;
@@ -55,6 +57,7 @@
   &__list {
     display: flex;
     flex-direction: column;
+    flex: 1 1 50%;
   }
   &__key {
     color: var(--city-text-color);
@@ -62,6 +65,7 @@
   &__link {
     text-decoration: none;
     color: var(--logo-font-color);
+
     &:hover {
       text-decoration: underline;
       color: var(--main-red-color);
@@ -74,4 +78,37 @@
 
 #map {
   height: 400px;
+}
+
+// Tablet
+@media (max-width: 991px) {
+  #map {
+    height: 300px;
+  }
+}
+
+// Mobile
+@media (max-width: 767px) {
+  .contact {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .brewery__name {
+    font-size: 3.5rem;
+    letter-spacing: 0.2rem;
+  }
+  .info__title {
+    font-size: 2.25rem;
+  }
+}
+
+// Small Mobile
+@media (max-width: 399px) {
+  .brewery__name {
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+  }
+  .info__title {
+    font-size: 2rem;
+  }
 }

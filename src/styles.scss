@@ -1,9 +1,25 @@
 @import "./app/consts/consts.scss";
 
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 800;
+  src: url("./assets/fonts/Poppins-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "Pacifico";
+  src: url("./assets/fonts/Pacifico-Regular.ttf");
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  font-display: optional;
 }
 
 body {

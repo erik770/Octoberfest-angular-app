@@ -6,7 +6,7 @@ import {
 import { IBrewery } from "src/app/models/brewery";
 import { BreweriesService } from "src/app/services/breweries.service";
 import { ActivatedRoute } from "@angular/router";
-import { Observable, skip, Subscriber } from "rxjs";
+import { Observable } from "rxjs";
 
 @Component({
   selector: "app-breweries-page",
@@ -15,8 +15,8 @@ import { Observable, skip, Subscriber } from "rxjs";
 })
 export class BreweriesPageComponent {
   breweriesPerPage = BREWERIES_PER_PAGE;
-  breweries$: Observable<IBrewery[]>;
   breweriesTotalCount = BREWERIES_TOTAL_COUNT;
+  breweries$: Observable<IBrewery[]>;
   isLazyLoadingEnabled = true;
 
   constructor(

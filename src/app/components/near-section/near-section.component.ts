@@ -4,8 +4,7 @@ import { IBrewery } from "src/app/models/brewery";
 import { BreweriesService } from "src/app/services/breweries.service";
 import * as L from "leaflet";
 import { IPosition } from "src/app/models/position";
-import { defaultPosition } from "src/app/consts/consts";
-import { ActivatedRoute } from "@angular/router";
+import { defaultPosition, MAP_SETTINGS } from "src/app/consts/consts";
 
 @Component({
   selector: "app-near-section",
@@ -36,13 +35,10 @@ export class NearSectionComponent implements OnInit, AfterViewInit {
       [this.currentPosition.latitude, this.currentPosition.longitude],
       4
     );
-    L.tileLayer(
-      "https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png",
-      {
-        maxZoom: 20,
-        attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>',
-      }
-    ).addTo(this.map);
+    L.tileLayer(MAP_SETTINGS.TILES_TEMPLATE_URL, {
+      maxZoom: MAP_SETTINGS.MAX_ZOOM,
+      attribution: MAP_SETTINGS.ATTRIBUTION,
+    }).addTo(this.map);
   }
 
   private initBreweries(position: IPosition) {

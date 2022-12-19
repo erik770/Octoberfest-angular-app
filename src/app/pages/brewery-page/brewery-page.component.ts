@@ -1,9 +1,8 @@
-import { AfterViewInit, Component, Input, OnInit } from "@angular/core";
-import { ActivatedRoute, Params } from "@angular/router";
+import { AfterViewInit, Component, OnInit } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
 import * as L from "leaflet";
-import { Subscription } from "rxjs";
+import { MAP_SETTINGS } from "src/app/consts/consts";
 import { IBrewery } from "src/app/models/brewery";
-import { BreweriesService } from "src/app/services/breweries.service";
 
 @Component({
   selector: "app-brewery-page",
@@ -14,9 +13,7 @@ export class BreweryPageComponent implements OnInit, AfterViewInit {
   brewery: IBrewery;
   map: L.Map;
 
-  constructor(
-    private activateRoute: ActivatedRoute // private breweriesService: BreweriesService
-  ) {}
+  constructor(private activateRoute: ActivatedRoute) {}
   ngOnInit(): void {
     this.activateRoute.data.subscribe(
       (resolverData) => (this.brewery = resolverData.brewery)
@@ -28,13 +25,10 @@ export class BreweryPageComponent implements OnInit, AfterViewInit {
       [+this.brewery.latitude, +this.brewery.longitude],
       14
     );
-    L.tileLayer(
-      "https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png",
-      {
-        maxZoom: 20,
-        attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>',
-      }
-    ).addTo(this.map);
+    L.tileLayer(MAP_SETTINGS.TILES_TEMPLATE_URL, {
+      maxZoom: MAP_SETTINGS.MAX_ZOOM,
+      attribution: MAP_SETTINGS.ATTRIBUTION,
+    }).addTo(this.map);
     this.addBreweryOnMap();
   }
 
