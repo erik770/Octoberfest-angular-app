@@ -20,13 +20,13 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run build --prod --deploy-url /octoberfest-app/
+        run: npm run build --prod --deploy-url /nosi-trans-beerfest/
 
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: gh-pages
-          build_dir: dist/octoberfest-app
+          build_dir: dist/nosi-trans-beerfest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
