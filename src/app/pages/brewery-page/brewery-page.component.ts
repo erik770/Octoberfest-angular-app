@@ -3,6 +3,7 @@ import { ActivatedRoute } from "@angular/router";
 import * as L from "leaflet";
 import { MAP_SETTINGS } from "src/app/consts/consts";
 import { IBrewery } from "src/app/models/brewery";
+import { environment } from "src/environments/environment";
 
 @Component({
   selector: "app-brewery-page",
@@ -28,6 +29,7 @@ export class BreweryPageComponent implements OnInit, AfterViewInit {
     L.tileLayer(MAP_SETTINGS.TILES_TEMPLATE_URL, {
       maxZoom: MAP_SETTINGS.MAX_ZOOM,
       attribution: MAP_SETTINGS.ATTRIBUTION,
+      accessToken: environment.apiKey,
     }).addTo(this.map);
     this.addBreweryOnMap();
   }
