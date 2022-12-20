@@ -1,6 +1,7 @@
 # NosiTransBeerfest
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.3.
+https://stackoverflow.com/questions/47513604/deploy-angular-website-on-github-products-404-error/47513767
 
 ## Development server
 
