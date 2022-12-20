@@ -1,7 +1,7 @@
 name: CI / CD for Angular
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build-and-deploy:
@@ -13,11 +13,20 @@ jobs:
       - name: Set up node.js
         uses: actions/setup-node@v3.3.0
         with:
-          node-version: '18.12.1'
-          cache: 'npm'
+          node-version: "18.12.1"
+          cache: "npm"
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Replace secret
+        uses: cschleiden/replace-tokens@v1
+        with:
+          tokenPrefix: "{"
+          tokenSuffix: "}"
+          files: "src/environments/environment.prod.ts"
+        env:
+          SECRET_API_KEY: ${{ secrets.API_KEY}}
 
       - name: Build
         run: npm run build --prod --deploy-url nosi-trans-beerfest
@@ -29,4 +38,3 @@ jobs:
           build_dir: dist/nosi-trans-beerfest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-

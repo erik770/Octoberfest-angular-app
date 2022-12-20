@@ -7,7 +7,7 @@ export const defaultPosition: IPosition = {
 export const BASE_URL = "https://api.openbrewerydb.org/breweries";
 export const MAP_SETTINGS = {
   TILES_TEMPLATE_URL:
-    "https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png",
+    "https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png?api_key={accessToken}",
   MAX_ZOOM: 20,
   ATTRIBUTION: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>',
 };

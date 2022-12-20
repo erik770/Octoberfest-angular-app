@@ -5,6 +5,7 @@ import { BreweriesService } from "src/app/services/breweries.service";
 import * as L from "leaflet";
 import { IPosition } from "src/app/models/position";
 import { defaultPosition, MAP_SETTINGS } from "src/app/consts/consts";
+import { environment } from "src/app/environments/environment";
 
 @Component({
   selector: "app-near-section",
@@ -38,6 +39,7 @@ export class NearSectionComponent implements OnInit, AfterViewInit {
     L.tileLayer(MAP_SETTINGS.TILES_TEMPLATE_URL, {
       maxZoom: MAP_SETTINGS.MAX_ZOOM,
       attribution: MAP_SETTINGS.ATTRIBUTION,
+      accessToken: environment.apiKey,
     }).addTo(this.map);
   }
 
