@@ -15,6 +15,7 @@ import { environment } from "src/environments/environment";
 export class NearSectionComponent implements OnInit, AfterViewInit {
   currentPosition: IPosition = defaultPosition;
   localBreweries$: Observable<IBrewery[]>;
+  isLoading = true;
   map: L.Map;
   constructor(private brewerisesService: BreweriesService) {
     this.localBreweries$ = this.brewerisesService.breweries$;
@@ -44,9 +45,13 @@ export class NearSectionComponent implements OnInit, AfterViewInit {
   }
 
   private initBreweries(position: IPosition) {
+    this.isLoading = true;
     this.brewerisesService.getNearby(position);
     this.localBreweries$.subscribe((breweries: IBrewery[]) => {
       if (breweries.length === 0) return;
+      if (breweries.length === 5) {
+        this.isLoading = false;
+      }
       const nearestBrewery = breweries[0];
       const middlePoint = this.middlePoint(position, {
         latitude: +nearestBrewery.latitude,

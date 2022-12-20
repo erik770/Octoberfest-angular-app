@@ -37,7 +37,9 @@ img {
   max-width: 100%;
   display: block;
 }
-
+.loader {
+  margin: 2rem 45%;
+}
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;

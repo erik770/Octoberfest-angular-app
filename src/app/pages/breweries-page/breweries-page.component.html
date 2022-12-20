@@ -9,9 +9,10 @@
           <input type="search" pInputText placeholder="Search by name" class="p-inputtext-lg"
             (input)="filter($event.target.value)" />
         </span>
+        <i *ngIf="isLoading" class="pi pi-spin pi-spinner loader" style="font-size: 5rem"></i>
       </ng-template>
       <ng-template let-brewery pTemplate="listItem">
-        <app-brewery-item [brewery]="brewery"> </app-brewery-item>
+        <app-brewery-item *ngIf="!isLoading" [brewery]="brewery"> </app-brewery-item>
       </ng-template>
       <ng-template pTemplate="paginatorleft"></ng-template>
       <ng-template pTemplate="paginatorright"></ng-template>

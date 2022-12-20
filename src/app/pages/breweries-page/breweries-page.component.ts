@@ -18,6 +18,7 @@ export class BreweriesPageComponent {
   breweriesTotalCount = BREWERIES_TOTAL_COUNT;
   breweries$: Observable<IBrewery[]>;
   isLazyLoadingEnabled = true;
+  isLoading = false;
 
   constructor(
     private brewerisesService: BreweriesService,
@@ -27,8 +28,14 @@ export class BreweriesPageComponent {
   }
 
   loadData(event: { rows: number; first: number }) {
+    this.isLoading = true;
     const pageNumber = event.first / event.rows + 1;
     this.brewerisesService.loadPortion(pageNumber, event.rows);
+    this.breweries$.subscribe((breweries) => {
+      if (breweries.length === BREWERIES_PER_PAGE) {
+        this.isLoading = false;
+      }
+    });
   }
 
   filter(name: string) {
