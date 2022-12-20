@@ -10,7 +10,7 @@
 
 `git clone https://github.com/erik770/Octoberfest-angular-app.git`
 
-`cd ./norsi-trans-beerfest`
+`cd ./Octoberfest-angular-app`
 
 `npm ci && npm run start`
 
