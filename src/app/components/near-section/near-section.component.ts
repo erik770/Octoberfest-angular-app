@@ -48,10 +48,8 @@ export class NearSectionComponent implements OnInit, AfterViewInit {
     this.isLoading = true;
     this.brewerisesService.getNearby(position);
     this.localBreweries$.subscribe((breweries: IBrewery[]) => {
-      if (breweries.length === 0) return;
-      if (breweries.length === 5) {
-        this.isLoading = false;
-      }
+      if (breweries.length === 0 || breweries.length !== 5) return;
+      this.isLoading = false;
       const nearestBrewery = breweries[0];
       const middlePoint = this.middlePoint(position, {
         latitude: +nearestBrewery.latitude,
