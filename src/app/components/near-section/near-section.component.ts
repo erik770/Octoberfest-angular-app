@@ -51,7 +51,6 @@ export class NearSectionComponent implements OnInit, AfterViewInit {
       if (breweries.length === 0) return;
       if (breweries.length === 5) {
         this.isLoading = false;
-        // return;
       }
       const nearestBrewery = breweries[0];
       const middlePoint = this.middlePoint(position, {
@@ -105,7 +104,7 @@ export class NearSectionComponent implements OnInit, AfterViewInit {
       .addTo(this.map);
   }
 
-  // TODO: куда-то это переместить, в утилс
+  // TODO: куда-то это переместить, в утилс или хз
   private degToRad = (degrees: number) => degrees * (Math.PI / 180);
   private radToDeg = (radians: number) => radians * (180 / Math.PI);
 
