@@ -6,13 +6,19 @@ import { PromoPageComponent } from "./pages/promo-page/promo-page.component";
 import { BreweryResolver } from "./resolvers/brewery.resolver";
 
 const routes: Routes = [
-  { path: "", title: "Octoberfest 2023", component: PromoPageComponent },
+  {
+    path: "",
+    title: "Octoberfest 2023",
+    component: PromoPageComponent,
+    data: { animation: "isLeft" },
+  },
   {
     path: "breweries/:id",
     component: BreweryPageComponent,
     resolve: {
       brewery: BreweryResolver,
     },
+    data: { animation: "isRight" },
   },
   {
     path: "breweries",
@@ -26,4 +32,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

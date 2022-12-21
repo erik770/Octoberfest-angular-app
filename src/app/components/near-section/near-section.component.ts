@@ -51,6 +51,7 @@ export class NearSectionComponent implements OnInit, AfterViewInit {
       if (breweries.length === 0) return;
       if (breweries.length === 5) {
         this.isLoading = false;
+        // return;
       }
       const nearestBrewery = breweries[0];
       const middlePoint = this.middlePoint(position, {

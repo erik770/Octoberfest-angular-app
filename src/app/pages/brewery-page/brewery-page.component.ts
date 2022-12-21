@@ -22,7 +22,7 @@ export class BreweryPageComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.map = L.map("map").setView(
+    this.map = L.map("map2").setView(
       [+this.brewery.latitude, +this.brewery.longitude],
       14
     );

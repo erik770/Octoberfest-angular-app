@@ -3,7 +3,7 @@
     <div class="near__title">Local choice</div>
     <div class="near__text">Check out your local breweries. It's a taste familiar from youth</div>
     <div class="near__listMap listMap">
-      <div [ngClass]="{'listMap__list_hidden': isLoading}" class="listMap__list">
+      <div class="listMap__list">
         <app-brewery-item *ngFor="let brewery of localBreweries$ | async" [brewery]="brewery"></app-brewery-item>
       </div>
       <div id="map" class="listMap__map"></div>

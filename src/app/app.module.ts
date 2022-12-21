@@ -14,6 +14,7 @@ import { PromoLandingSectionComponent } from "./components/promo-landing-section
 import { InputTextModule } from "primeng/inputtext";
 import { BreweryPageComponent } from "./pages/brewery-page/brewery-page.component";
 import { BreweryTypePipe } from "./pipes/breweryType.pipe";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -33,8 +34,9 @@ import { BreweryTypePipe } from "./pipes/breweryType.pipe";
     HttpClientModule,
     DataViewModule,
     InputTextModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
